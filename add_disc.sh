@@ -16,6 +16,11 @@
 
 #########################################################
 
+
+if [ "$#" -ne 4 ]; then
+    echo "Script need exactly 4 parameters"
+fi
+
 # creates mcfunction to give the disc
 echo "give @s minecraft:music_disc_13[minecraft:jukebox_playable={song:\"$1:$3\"},minecraft:custom_model_data={strings:[\"music_disc_$3\"]}]" > $1-datapack/data/$1/function/$3.mcfunction
 
